@@ -1,10 +1,18 @@
 
 :root {
+  --app-name-height: 60px;
+  --toc-width: 240px;
+  --sidebar-width: 300px;
+  --theme-color: #4262f0;
+  --text-color-primary: var(--theme-color);
+  --text-color-secondary: #364149;
+  --text-color-placeholder: #a8abb2;
+  --border-color: #eee;
+  --bg-color-primary: #22a2c91c;
   --docsifytabs-border-color: #ededed;
-  --docsifytabs-tab-highlight-color: purple;
-  --app-name-height: 64px;
-  --bg-primary: #22a2c91c;
-  --color-text: #505d6b;
+  --docsifytabs-tab-highlight-color: var(--theme-color);
+  --text-color-base: var(--text-color-secondary);
+  --text-color-tertiary: var(--text-color-primary);
 }
 
 .github-corner {
@@ -13,34 +21,45 @@
 
 .sidebar {
   padding-top: var(--app-name-height) !important;
+  width: var(--sidebar-width, 300px);
 }
 
 .sidebar .app-name {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 0;
-  height: var(--app-name-height);
   margin: auto;
-  width: 100%;
+  height: var(--app-name-height);
+  /* width: 100%; */
+  width: calc(var(--sidebar-width, 300px) - 5px);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   color: var(--theme-color,#42b983);
+  background-color: white;
+  border-bottom: 1px solid #eee;
 }
 
-.sidebar .search {
-  border-top: 1px solid #eee;
-}
+/* .sidebar .search {
+  position: sticky;
+  top: 0;
+  background-color: white;
+} */
 
 .sidebar .search input {
   border: 1px solid #eee;
 }
 
+.sidebar .search input::placeholder {
+  color: var(--text-color-placeholder);
+}
+
 .sidebar ul li:hover > a {
-  color: var(--theme-color,#42b983);
+  color: var(--text-color-primary);
 }
 .sidebar ul li.file.open > a {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-color-primary);
 }
 
 .sidebar ul {
@@ -49,4 +68,35 @@
 
 .sidebar-nav ul:not(.app-sub-sidebar)>li:not(.file)::before {
   left: -16px;
+}
+
+main > section.content {
+  justify-content: space-between;
+}
+
+.nav {
+  min-width: var(--toc-width, 700px);
+}
+
+.anchor:hover {
+  text-decoration: none;
+}
+
+.markdown-section {
+  width: 100%;
+}
+
+.page_toc > ul > li > a {
+  font-weight: normal;
+  /* color: var(--text-color-primary); */
+}
+
+.page_toc ul li a {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+}
+
+.page_toc ul li a span:hover {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
 }
