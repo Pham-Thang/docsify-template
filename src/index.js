@@ -6,8 +6,8 @@ window.$docsify = {
   // basePath: '/',
   // Sidebar
   loadSidebar: true,
-  subMaxLevel: 3,
-  sidebarDisplayLevel: 1, // set sidebar display level
+  // subMaxLevel: 3,
+  // sidebarDisplayLevel: 2, // set sidebar display level
   alias: {
     '/.*/_sidebar.md': '/_sidebar.md',
   },
@@ -27,5 +27,10 @@ window.$docsify = {
     theme      : 'classic', // default
     tabComments: true,      // default
     tabHeadings: true       // default
-  }
+  },
+  toc: {
+    scope: '.markdown-section',
+    headings: 'h1, h2, h3, h4, h5, h6',
+    title: '<b>Contents</b>',
+  },
 }
