@@ -4,7 +4,6 @@
 
 # Headline 1
 > An awesome project.
-
 ## Headline 2
 > An awesome project.
 

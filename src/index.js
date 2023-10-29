@@ -34,4 +34,14 @@ window.$docsify = {
     headings: 'h1, h2, h3, h4, h5, h6',
     title: '<b>Contents</b>',
   },
+  autoHeaders: {
+    separator: 'decimal', // decimal, dash, bracket, or other
+    // custom: '--',
+    levels: { // 1-6
+      start: '2',
+      finish: '4'
+    },
+    // scope: '#main',
+    debug: false
+  }
 }

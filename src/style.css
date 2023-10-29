@@ -82,6 +82,10 @@ main > section.content {
   text-decoration: none;
 }
 
+.markdown-section {
+  width: 100%;
+}
+
 .page_toc > ul > li > a {
   font-weight: normal;
   /* color: var(--text-color-primary); */
