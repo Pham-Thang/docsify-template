@@ -19,6 +19,7 @@ window.$docsify = {
   search: {
     placeholder: 'Nhập để tìm kiếm',
     noData: 'Không tìm thấy kết quả!',
+    localStorage: false,
   },
   // Tabs: https://jhildenbiddle.github.io/docsify-tabs/#/?id=usage
   tabs: {
